@@ -1,0 +1,16 @@
+CREATE DATABASE vivero;
+
+USE vivero;
+
+CREATE TABLE plantas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  description TEXT
+);
+
+CREATE TABLE api_keys (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	secret_key VARCHAR(64) NOT NULL UNIQUE,
+    expires_at TIMESTAMP
+);
